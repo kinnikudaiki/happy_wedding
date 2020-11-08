@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>OurBlog</title>
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+
+    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+  </head>
+  <body>
+
+
+    <div class="w1000">
+      <button class="menubtn">contact</button>
+      <nav>
+          <ul class="contact">
+              <li>連絡先</li>
+              <li>070-△△△△-△△△△</li>
+          </ul>  
+      </nav>
+      <div class="content">
+      </div>
+    </div>
+
+    <header class="header">
+    
+      <div class="header__title">
+        Happy Wedding!! Megumi & Takashi
+      </div>
+    </header>
+
+
+    <div class="contents">
+      <div class="video1__box">
+        <div class="video1__title">
+          本編余興動画
+        </div>
+      </div>  
+      <div class="video1">
+        <%= video_tag("/assets/videos/wedding.mp4", :controls => true, :loop => true, :width =>480, :height => 300) %>
+      </div>  
+      <div class="video1__box">
+        <div class="video1__title">
+          タイトル1
+        </div>
+      </div>  
+      <div class="video2">
+        <%= video_tag("/assets/videos/honpen.mp4", :controls => true, :loop => true, :width =>360, :height => 220) %>
+      </div>  
+      <div class="video1__box">
+        <div class="video1__title">
+          タイトル2
+        </div>
+      </div>  
+      <div class="video3">
+        <%= video_tag("/assets/videos/honpen.mp4", :controls => true, :loop => true, :width =>360, :height => 220) %>
+      </div>  
+      <div class="video1__box">
+        <div class="video1__title">
+          タイトル3
+        </div>
+      </div>  
+      <div class="video4">
+        <%= video_tag("/assets/videos/honpen.mp4", :controls => true, :loop => true, :width =>360, :height => 220) %>
+      </div>  
+      <div class="video1__box">
+        <div class="video1__title">
+          タイトル4
+        </div>
+      </div>  
+      <div class="video5">
+        <%= video_tag("/assets/videos/honpen.mp4", :controls => true, :loop => true, :width =>360, :height => 220) %>
+      </div>  
+      <div class="video1__box">
+        <div class="video1__title">
+          タイトル5
+        </div>
+      </div>  
+      <div class="video6">
+        <%= video_tag("/assets/videos/honpen.mp4", :controls => true, :loop => true, :width =>360, :height => 220) %>
+      </div>
+
+      <%= yield %>
+    </div>
+    <footer class="footer">
+      Copyright ©  M.M 2020~
+    </footer>
+    <script src="main.js"></script>
+  </body>
+</html>
