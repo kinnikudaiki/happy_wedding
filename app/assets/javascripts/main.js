@@ -1,12 +1,18 @@
-console.log("hello");
-
-$(function(){
-  $("nav").hide();
-});
-
-$(function(){
-  $("nav").hide();
-  $(".menubtn").click(function(){//メニューボタンをクリックしたとき
-      $("nav").toggle(300);//0.3秒で表示したり非表示にしたりする
+$(function () {
+  var $nav = $('#navArea');
+  var $btn = $('.toggle_btn');
+  var $mask = $('#mask');
+  var open = 'open'; // class
+  // menu open close
+  $btn.on('click', function () {
+    if (!$nav.hasClass(open)) {
+      $nav.addClass(open);
+    } else {
+      $nav.removeClass(open);
+    }
   });
-});
+  // mask close
+  $mask.on('click', function () {
+    $nav.removeClass(open);
+  });
+})
